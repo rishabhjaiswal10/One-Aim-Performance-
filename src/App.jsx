@@ -3,13 +3,9 @@ import useMainEffects from "./hooks/useMainEffects";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Discover from "./components/Discover";
-import Experience from "./components/Experience";
-import Video from "./components/Video";
-import Booking from "./components/Booking";
-import Places from "./components/Places";
-import Subscribe from "./components/Subscribe";
-import Sponsors from "./components/Sponsors";
+import Programs from "./components/Programs";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 /*
@@ -28,13 +24,9 @@ export default function App() {
         <main className="main">               {/* holds sections vertically */}
           <Home />
           <About />
-          {/* <Discover /> */}
-          <Experience />
-          <Video />
-          <Booking />
-          <Places />
-          <Subscribe />
-          <Sponsors />
+          <Programs />
+          <Services />
+          <Contact />
         </main>
       </div>
 

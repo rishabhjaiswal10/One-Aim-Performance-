@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/img/OAP-logo-removebg-preview.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,7 +8,9 @@ export default function Navbar() {
     <header className="header" id="header">
       <nav className="nav container">
         {/* Logo */}
-        <a href="#" className="nav__logo">Travel</a>
+        <a href="#" className="nav__logo">
+          <img src={logo} alt="One Aim Performance" className="nav__logo-img" />
+        </a>
 
         {/* Navigation Menu */}
         <div className={`nav__menu ${menuOpen ? "show-menu" : ""}`} id="nav-menu">
@@ -16,13 +19,16 @@ export default function Navbar() {
               <a href="#home" className="nav__link active-link">Home</a>
             </li>
             <li className="nav__item">
-              <a href="#about" className="nav__link">About</a>
+              <a href="#about" className="nav__link">About Us</a>
             </li>
             <li className="nav__item">
-              <a href="#discover" className="nav__link">Discover</a>
+              <a href="#programs" className="nav__link">Programs</a>
             </li>
             <li className="nav__item">
-              <a href="#place" className="nav__link">Places</a>
+              <a href="#services" className="nav__link">Services</a>
+            </li>
+            <li className="nav__item">
+              <a href="#contact" className="nav__link">Contact Us</a>
             </li>
           </ul>
 
