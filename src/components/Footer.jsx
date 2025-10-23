@@ -6,24 +6,21 @@ export default function Footer() {
       <div className="footer__container container grid">
         {/* ===== Footer Main Content ===== */}
         <div className="footer__content grid">
-          {/* Travel Logo + Description */}
+          {/* One Aim Performance Logo + Description */}
           <div className="footer__data">
-            <h3 className="footer__title">Travel</h3>
+            <h3 className="footer__title">One Aim Performance</h3>
             <p className="footer__description">
-              Travel — you choose the destination, <br /> we offer you the experience.
+              Unlock your athletic potential through <br /> evidence-based, athlete-centric programs.
             </p>
             <div>
               <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="footer__social">
                 <i className="ri-facebook-box-fill"></i>
               </a>
-              <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="footer__social">
-                <i className="ri-twitter-fill"></i>
-              </a>
               <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="footer__social">
                 <i className="ri-instagram-fill"></i>
               </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="footer__social">
-                <i className="ri-youtube-fill"></i>
+              <a href="https://wa.me/919890860102" target="_blank" rel="noreferrer" className="footer__social">
+                <i className="ri-whatsapp-fill"></i>
               </a>
             </div>
           </div>
@@ -32,39 +29,39 @@ export default function Footer() {
           <div className="footer__data">
             <h3 className="footer__subtitle">About</h3>
             <ul>
-              <li className="footer__item"><a href="#" className="footer__link">About Us</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">Features</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">News & Blog</a></li>
+              <li className="footer__item"><a href="#about" className="footer__link">About Us</a></li>
+              <li className="footer__item"><a href="#programs" className="footer__link">Programs</a></li>
+              <li className="footer__item"><a href="#services" className="footer__link">Services</a></li>
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Programs Links */}
           <div className="footer__data">
-            <h3 className="footer__subtitle">Company</h3>
+            <h3 className="footer__subtitle">Programs</h3>
             <ul>
-              <li className="footer__item"><a href="#" className="footer__link">Team</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">Plan & Pricing</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">Become a member</a></li>
+              <li className="footer__item"><a href="#programs" className="footer__link">Athlete Fitness</a></li>
+              <li className="footer__item"><a href="#programs" className="footer__link">Strength Training</a></li>
+              <li className="footer__item"><a href="#programs" className="footer__link">Rehabilitation</a></li>
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Contact Links */}
           <div className="footer__data">
-            <h3 className="footer__subtitle">Support</h3>
+            <h3 className="footer__subtitle">Contact</h3>
             <ul>
-              <li className="footer__item"><a href="#" className="footer__link">FAQs</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">Support Center</a></li>
-              <li className="footer__item"><a href="#" className="footer__link">Contact Us</a></li>
+              <li className="footer__item"><a href="#contact" className="footer__link">Contact Us</a></li>
+              <li className="footer__item"><a href="tel:+919890860102" className="footer__link">+91 9890860102</a></li>
+              <li className="footer__item"><a href="mailto:oneaimperformance@gmail.com" className="footer__link">Email Us</a></li>
             </ul>
           </div>
         </div>
 
         {/* ===== Footer Bottom ===== */}
         <div className="footer__rights">
-          <p className="footer__copy">© 2025 Travel. All rights reserved.</p>
+          <p className="footer__copy">© 2025 One Aim Performance. All rights reserved.</p>
 
           <div className="footer__terms">
-            <a href="#" className="footer__terms-link">Terms & Agreements</a>
+            <a href="#" className="footer__terms-link">Terms & Conditions</a>
             <a href="#" className="footer__terms-link">Privacy Policy</a>
           </div>
         </div>

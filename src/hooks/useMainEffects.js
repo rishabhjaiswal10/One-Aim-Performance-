@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-import Swiper from "swiper/bundle";
 
 export default function useMainEffects() {
   useEffect(() => {
@@ -32,42 +31,6 @@ export default function useMainEffects() {
     }
     window.addEventListener('scroll', scrollHeader);
 
-    /*==================== SWIPER DISCOVER ====================*/
-    new Swiper(".discover__container", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop: true,
-      spaceBetween: 32,
-      coverflowEffect: { rotate: 0 },
-    });
-
-    /*==================== VIDEO ====================*/
-    const videoFile = document.getElementById('video-file');
-    const videoButton = document.getElementById('video-button');
-    const videoIcon = document.getElementById('video-icon');
-
-    if (videoButton && videoFile) {
-      const playPause = () => {
-        if (videoFile.paused) {
-          videoFile.play();
-          videoIcon.classList.add('ri-pause-line');
-          videoIcon.classList.remove('ri-play-line');
-        } else {
-          videoFile.pause();
-          videoIcon.classList.remove('ri-pause-line');
-          videoIcon.classList.add('ri-play-line');
-        }
-      };
-      videoButton.addEventListener('click', playPause);
-
-      videoFile.addEventListener('ended', () => {
-        videoIcon.classList.remove('ri-pause-line');
-        videoIcon.classList.add('ri-play-line');
-      });
-    }
-
     /*==================== SCROLL UP ====================*/
     function scrollUp() {
       const scrollUp = document.getElementById('scroll-up');
@@ -81,21 +44,21 @@ export default function useMainEffects() {
     /*==================== SCROLL REVEAL ====================*/
     const sr = ScrollReveal({
       distance: '60px',
-      duration: 2800,
+      duration: 2000,
     });
 
     sr.reveal(`.home__data, .home__social-link, .home__info,
-              .discover__container, .experience__data, .experience__overlay,
-              .place__card, .sponsor__content, .footer__data, .footer__rights`, {
+              .programs__card, .services__strategy-item, .services__facility-item,
+              .contact__info, .contact__form-container, .footer__data, .footer__rights`, {
       origin: 'top',
       interval: 100,
     });
 
-    sr.reveal(`.about__data, .video__description, .subscribe__description`, {
+    sr.reveal(`.about__data, .about__vision-mission`, {
       origin: 'left',
     });
 
-    sr.reveal(`.about__img-overlay, .video__content, .subscribe__form`, {
+    sr.reveal(`.about__img-overlay, .contact__founder-content`, {
       origin: 'right',
       interval: 100,
     });
