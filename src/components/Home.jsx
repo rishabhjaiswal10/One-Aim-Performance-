@@ -20,18 +20,7 @@ export default function Home() {
           <a href="#programs" className="button">Explore Programs</a>
         </div>
 
-        {/* Social media links */}
-        <div className="home__social">
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="home__social-link">
-            <i className="ri-facebook-box-fill"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="home__social-link">
-            <i className="ri-instagram-fill"></i>
-          </a>
-          <a href="https://wa.me/919890860102" target="_blank" rel="noreferrer" className="home__social-link">
-            <i className="ri-whatsapp-fill"></i>
-          </a>
-        </div>
+    
 
         {/* Home Info section */}
         <div className="home__info">

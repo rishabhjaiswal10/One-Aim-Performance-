@@ -31,9 +31,6 @@ export default function App() {
       </div>
 
       <Footer />
-      <a href="#" className="scrollup" id="scroll-up">
-        <i className="ri-arrow-up-line scrollup__icon"></i>
-      </a>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import about1 from "../assets/img/about1.jpg";
-import about2 from "../assets/img/about2.jpg";
+import about2 from "../assets/img/cropedback.png";
+import about1 from "../assets/img/dunbels.jpg";
 
 export default function About() {
   return (

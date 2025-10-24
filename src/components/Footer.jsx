@@ -10,21 +10,10 @@ export default function Footer() {
           <div className="footer__data">
             <h3 className="footer__title">One Aim Performance</h3>
             <p className="footer__description">
-              Unlock your athletic potential through <br /> evidence-based, athlete-centric programs.
+              Unlock your athletic potential through evidence-based, athlete-centric programs.
             </p>
-            <div>
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="footer__social">
-                <i className="ri-facebook-box-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="footer__social">
-                <i className="ri-instagram-fill"></i>
-              </a>
-              <a href="https://wa.me/919890860102" target="_blank" rel="noreferrer" className="footer__social">
-                <i className="ri-whatsapp-fill"></i>
-              </a>
-            </div>
+            
           </div>
-
           {/* About Links */}
           <div className="footer__data">
             <h3 className="footer__subtitle">About</h3>
@@ -61,7 +50,7 @@ export default function Footer() {
           <p className="footer__copy">© 2025 One Aim Performance. All rights reserved.</p>
 
           <div className="footer__terms">
-            <a href="#" className="footer__terms-link">Terms & Conditions</a>
+            <a href="#" className="footer__terms-link">Terms & Conditions </a>
             <a href="#" className="footer__terms-link">Privacy Policy</a>
           </div>
         </div>

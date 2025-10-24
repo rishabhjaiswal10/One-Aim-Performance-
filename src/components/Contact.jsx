@@ -8,6 +8,8 @@ export default function Contact() {
     message: ''
   });
 
+  const [status, setStatus] = useState(""); // For feedback messages
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -15,25 +17,41 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setStatus("Sending...");
+
+    {/*                            Change the formspree endpoint here                                */}
+    try {
+      const response = await fetch("https://formspree.io/f/xanprvja", { 
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Error sending message. Please try again later.");
+    }
   };
 
   return (
     <section className="contact section" id="contact">
       <div className="contact__container container">
-        <h2 className="section__title contact__title">
-          Contact Us
-        </h2>
+        <h2 className="section__title contact__title">Contact Us</h2>
         <p className="contact__subtitle">
           Get in touch with us to start your journey towards peak athletic performance.
         </p>
 
+        <br /><br />
+
         <div className="contact__content grid">
+          {/* Left Side Info */}
           <div className="contact__info">
             <h3 className="contact__info-title">Get In Touch</h3>
             <p className="contact__info-description">
@@ -82,6 +100,7 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Right Side Form */}
           <div className="contact__form-container">
             <form className="contact__form" onSubmit={handleSubmit}>
               <h3 className="contact__form-title">Send us a Message</h3>
@@ -128,20 +147,24 @@ export default function Contact() {
               <button type="submit" className="button contact__form-button">
                 Send Message
               </button>
+
+              {/* Status Message */}
+              {status && <p className="contact__form-status">{status}</p>}
             </form>
           </div>
         </div>
 
+        {/* Founder Section */}
         <div className="contact__founder">
           <div className="contact__founder-content">
             <div className="contact__founder-image">
-              <img src={founderImage} alt="Sumeet Urmila Krishna Jaiswal" className="contact__founder-img" />
+              <img src={founderImage} alt="Founder" className="contact__founder-img" />
             </div>
             <div className="contact__founder-info">
               <h3 className="contact__founder-name">Sumeet Urmila Krishna Jaiswal</h3>
               <p className="contact__founder-title">Founder and Head Coach</p>
               <p className="contact__founder-message">
-                "Being an athlete and having studied the subject with coaching experience of 6+ years, I have understood the requirement and importance of a team that is needed by every athlete to level up their sport. My goal is to build this community (One Aim performance) to reach out to as many athletes as possible who lack professional guidance."
+                "Being an athlete and having studied the subject with coaching experience of 6+ years, I have understood the requirement and importance of a team that is needed by every athlete to level up their sport. My goal is to build this community (One Aim Performance) to reach out to as many athletes as possible who lack professional guidance."
               </p>
             </div>
           </div>
@@ -150,4 +173,3 @@ export default function Contact() {
     </section>
   );
 }
-

@@ -31,6 +31,31 @@ export default function useMainEffects() {
     }
     window.addEventListener('scroll', scrollHeader);
 
+    /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+    function scrollActive() {
+      const scrollY = window.pageYOffset;
+      const sections = document.querySelectorAll('section[id]');
+
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+        const navLinks = document.querySelectorAll('.nav__link');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          // Remove active-link from all links first
+          navLinks.forEach(link => link.classList.remove('active-link'));
+          // Add active-link to current section's link
+          const currentLink = document.querySelector('.nav__link[href*="' + sectionId + '"]');
+          currentLink?.classList.add('active-link');
+        }
+      });
+    }
+    
+    // Call once on load to set initial active state
+    scrollActive();
+    window.addEventListener('scroll', scrollActive);
+
     /*==================== SCROLL UP ====================*/
     function scrollUp() {
       const scrollUp = document.getElementById('scroll-up');
@@ -63,27 +88,6 @@ export default function useMainEffects() {
       interval: 100,
     });
 
-    /*==================== DARK LIGHT THEME ====================*/
-    const themeButton = document.getElementById('theme-button');
-    const darkTheme = 'dark-theme';
-    const iconTheme = 'ri-sun-line';
-    const selectedTheme = localStorage.getItem('selected-theme');
-    const selectedIcon = localStorage.getItem('selected-icon');
-
-    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
-
-    if (selectedTheme) {
-      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-      themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
-    }
-
-    themeButton?.addEventListener('click', () => {
-      document.body.classList.toggle(darkTheme);
-      themeButton.classList.toggle(iconTheme);
-      localStorage.setItem('selected-theme', getCurrentTheme());
-      localStorage.setItem('selected-icon', getCurrentIcon());
-    });
 
   }, []);
 }
