@@ -723,6 +723,7 @@ input {
 .footer__data {
   flex: 1; /* makes each column take equal width when space allows */
   min-width: 220px; /* ensures proper wrapping at small widths */
+  text-align: center;
 }
 
 /* Headings */
@@ -1214,5 +1215,120 @@ footer.footer {
 .home__info {
   margin-left: 8%;
   justify-content: flex-start;
+}
+/* ===== MOBILE MENU FULLSCREEN FIX ===== */
+.nav__toggle i {
+  color: black; /* or your theme color */
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw; /* full screen width */
+    height: 100vh; /* full screen height */
+    background-color: rgba(255, 255, 255, 0.98); /* dark transparent blue */
+    backdrop-filter: blur(6px);
+    padding: 5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    transition: 0.4s ease;
+    z-index: 9999; /* ensures it overlays everything */
+  }
+
+  .show-menu {
+    right: 0; /* slide in */
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.8rem;
+  }
+
+  .nav__link {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .nav__link:hover,
+  .active-link {
+    color: #ffd700; /* yellow hover accent */
+  }
+
+  .nav__close,
+  .change-theme {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+/* ===== FIX HOME SECTION OVERLAP ON MOBILE ===== */
+@media screen and (max-width: 768px) {
+  .home__container {
+    display: flex;
+    flex-direction: column; /* stack text and info vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem; /* spacing between blocks */
+    height: auto; /* allow full content height */
+  }
+
+  .home__data {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home__info {
+    position: static; /* remove absolute positioning */
+    background-color: var(--first-color); /* keep consistent with theme */
+    width: 90%;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home__info-title {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .home__info-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+  }
+
+  .home__info-number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffd700; /* yellow highlight */
+  }
+
+  .home__info-label {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    align-self: center;
+  }
 }
 

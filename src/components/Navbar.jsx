@@ -32,11 +32,6 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Dark Mode Toggle */}
-          <div className="nav__dark">
-            <span className="change-theme-name">Dark mode</span>
-            <i className="ri-moon-line change-theme" id="theme-button"></i>
-          </div>
 
           {/* Close Icon for Mobile */}
           <i
