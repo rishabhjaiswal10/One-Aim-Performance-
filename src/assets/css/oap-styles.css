@@ -666,3 +666,199 @@
   }
 }
 
+/* Add this to your oap-styles.css file */
+
+/* Active link styling - make it more prominent */
+/* .header .nav__link.active-link {
+  color: var(--oap-yellow) !important;
+  font-weight: var(--font-semi-bold);
+}
+
+.header.scroll-header .nav__link.active-link {
+  color: var(--oap-yellow) !important;
+}
+
+.header .nav__link.active-link::before {
+  background-color: var(--oap-yellow) !important;
+}
+
+.header.scroll-header .nav__link.active-link::before {
+  background-color: var(--oap-yellow) !important;
+} */
+
+/* Desktop active link */
+@media screen and (min-width: 768px) {
+  .scroll-header .active-link {
+    color: var(--oap-yellow) !important;
+  }
+  
+  .scroll-header .active-link::before {
+    background-color: var(--oap-yellow) !important;
+  }
+}
+
+
+
+
+
+/* Base nav link style */
+.header .nav__link {
+  position: relative;
+  color: #001F54; /* normal navy text */
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Add a thin underline effect using ::before */
+.header .nav__link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* When active — only the underline becomes yellow */
+.header .nav__link.active-link::before {
+  width: 100%;
+  background-color: var(--oap-yellow) !important;
+}
+
+/* Keep text color the same even when active */
+.header .nav__link.active-link {
+  color: #001F54 !important;
+  font-weight: var(--font-semi-bold);
+}
+
+/* Optional: on scroll header (if it changes) */
+.header.scroll-header .nav__link.active-link::before {
+  background-color: var(--oap-yellow) !important;
+}
+
+.programs__subtitle {
+  margin-bottom: 2.5rem; /* Adds space between text and cards */
+}
+
+@media screen and (max-width: 768px) {
+  .programs__subtitle {
+    margin-bottom: 1.5rem; /* slightly smaller spacing on mobile */
+  }
+}
+.section__subtitle {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section__subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile layout fixes */
+@media screen and (max-width: 768px) {
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .home__data {
+    order: 1;
+  }
+
+  .home__social {
+    order: 2;
+    margin: 1.5rem 0;
+  }
+
+  .home__info {
+    order: 3;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .home__info-overlay {
+    background: none; /* remove colored box if visible */
+    padding: 0;
+  }
+
+  .home__info-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .home__info-stat {
+    background: var(--oap-yellow);
+    color: #001F54;
+    width: 80%;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .home__info-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .home__info-label {
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .home__data-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home__data {
+    order: 1;
+  }
+
+  .home__social {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  /* Move this after Explore Programs */
+  .home__info {
+    order: 3;
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

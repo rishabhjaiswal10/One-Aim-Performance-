@@ -61,7 +61,7 @@ export default function Footer() {
           <p className="footer__copy">© 2025 One Aim Performance. All rights reserved.</p>
 
           <div className="footer__terms">
-            <a href="#" className="footer__terms-link">Terms & Conditions</a>
+            <a href="#" className="footer__terms-link">Terms & Conditions </a>
             <a href="#" className="footer__terms-link">Privacy Policy</a>
           </div>
         </div>

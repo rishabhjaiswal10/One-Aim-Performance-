@@ -10,7 +10,7 @@ export default function Services() {
         <p className="services__subtitle">
           We provide comprehensive support to help athletes reach their full potential through our state-of-the-art facilities and expert services.
         </p>
-
+        <br></br><br></br>
         <div className="services__content">
           <div className="services__strategies">
             <h3 className="services__strategies-title">Our Strategies</h3>

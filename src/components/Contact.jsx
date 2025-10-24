@@ -32,7 +32,7 @@ export default function Contact() {
         <p className="contact__subtitle">
           Get in touch with us to start your journey towards peak athletic performance.
         </p>
-
+        <br></br><br></br>
         <div className="contact__content grid">
           <div className="contact__info">
             <h3 className="contact__info-title">Get In Touch</h3>
