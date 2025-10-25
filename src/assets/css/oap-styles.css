@@ -757,19 +757,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Mobile layout fixes */
 @media screen and (max-width: 768px) {
   .home__container {
@@ -817,12 +804,12 @@
   }
 
   .home__info-number {
-    font-size: 1.8rem;
+    font-size: var(--h2-font-size);
     font-weight: 700;
   }
 
   .home__info-label {
-    font-size: 0.9rem;
+    font-size: var(--smaller-font-size);
     display: block;
     margin-top: 0.3rem;
   }
