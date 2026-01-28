@@ -1,6 +1,8 @@
 import React from "react";
-import about2 from "../assets/img/cropedback.png";
-import about1 from "../assets/img/dunbels.jpg";
+import gallery1 from "../assets/img/Gallery/OapStudents.png";
+import gallery2 from "../assets/img/Gallery/OapOffice02.png";
+import gallery3 from "../assets/img/Gallery/Screenshot from 2026-01-28 23-59-20.png";
+import gallery4 from "../assets/img/Gallery/Screenshot from 2026-01-29 00-00-05.png";
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
           </h2>
 
           <p className="about__description">
-            We are a sports science firm that primarily focuses on athletes at the grassroots level to enhance performance. The designed programs are evidence-based and athlete-centric, which helps athletes level up their performance in their respective sport while reducing the chance of injuries.
+            We are a sports science firm that focuses on all level athletes from grassroots to Elite level to enhance performance. The designed programs are evidence-based and athlete-centric, which helps athletes level up their performance in their respective sport while reducing the chance of injuries.
           </p>
 
           <div className="about__vision-mission">
@@ -40,14 +42,34 @@ export default function About() {
           </a>
         </div>
 
-        {/* About images */}
-        <div className="about__img">
-          <div className="about__img-overlay">
-            <img src={about1} alt="Athlete Training" className="about__img-one" />
+        {/* About images gallery */}
+        <div className="about__img about__gallery">
+          <div className="about__gallery-item">
+            <img
+              src={gallery1}
+              alt="One Aim Performance athletes and students"
+            />
           </div>
 
-          <div className="about__img-overlay">
-            <img src={about2} alt="Performance Enhancement" className="about__img-two" />
+          <div className="about__gallery-item">
+            <img
+              src={gallery2}
+              alt="One Aim Performance training and office environment"
+            />
+          </div>
+
+          <div className="about__gallery-item">
+            <img
+              src={gallery4}
+              alt="One Aim Performance coaching and sessions"
+            />
+          </div>
+
+          <div className="about__gallery-item">
+            <img
+              src={gallery3}
+              alt="One Aim Performance facility and training"
+            />
           </div>
         </div>
       </div>

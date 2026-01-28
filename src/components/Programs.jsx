@@ -14,64 +14,93 @@ export default function Programs() {
         <div className="programs__grid grid">
           <div className="programs__card">
             <div className="programs__card-number">01</div>
-            <h3 className="programs__card-title">Athlete Fitness</h3>
+            <h3 className="programs__card-title">Athlete Performance</h3>
             <p className="programs__card-description">
-              Comprehensive fitness programs designed specifically for athletes to enhance performance and reduce injury risk.
+              At OAP the program is driven towards Performance Enhancement and Injury Reduction.
             </p>
+            <ul className="programs__card-features">
+              <li>Assessment & Profiling</li>
+              <li>Periodization & Programming</li>
+              <li>Power, Speed & Strength Development</li>
+              <li>Injury Reduction strategies</li>
+              <li>Technology & Data Driven approach</li>
+              <li>Nutritional support</li>
+              <li>Sports Specific Training</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
 
           <div className="programs__card">
             <div className="programs__card-number">02</div>
-            <h3 className="programs__card-title">Strength Training</h3>
+            <h3 className="programs__card-title">Youth Athlete Development Program</h3>
             <p className="programs__card-description">
-              Specialized strength training programs tailored to individual sport requirements and performance goals.
+              Comprehensive long-term development programs designed to nurture young athletes and build a strong foundation for future success.
             </p>
+            <ul className="programs__card-features">
+              <li>Long Term Athlete Development Program (LTAD)</li>
+              <li>Peak Height Velocity Monitoring</li>
+              <li>Parent & Coach Education</li>
+              <li>Injury Reduction program</li>
+              <li>Power, Speed, & Strength Development</li>
+              <li>Periodized training programs</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
 
           <div className="programs__card">
             <div className="programs__card-number">03</div>
-            <h3 className="programs__card-title">Conditioning</h3>
+            <h3 className="programs__card-title">Physiotherapy & Rehabilitation</h3>
             <p className="programs__card-description">
-              Sport-specific conditioning programs to improve endurance, speed, and overall athletic performance.
+              Specialized rehabilitation programs to help athletes recover from injuries and return to peak performance.
             </p>
+            <ul className="programs__card-features">
+              <li>Post surgery Rehabilitation</li>
+              <li>Return-to-sport training pathway</li>
+              <li>Rehabilitation program</li>
+              <li>Pain management</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
 
           <div className="programs__card">
             <div className="programs__card-number">04</div>
-            <h3 className="programs__card-title">Injury Screening</h3>
+            <h3 className="programs__card-title">Recovery</h3>
             <p className="programs__card-description">
-              Comprehensive movement assessments to identify potential injury risks and develop preventive strategies.
+              Comprehensive recovery support to optimize performance and maintain peak physical condition.
             </p>
+            <ul className="programs__card-features">
+              <li>Sports Massage Therapy</li>
+              <li>Nutritional Support</li>
+              <li>Cognitive & Psychological support</li>
+              <li>Load monitoring</li>
+              <li>Athlete Education</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
 
           <div className="programs__card">
             <div className="programs__card-number">05</div>
-            <h3 className="programs__card-title">Post Surgery Rehabilitation</h3>
+            <h3 className="programs__card-title">Remote Program</h3>
             <p className="programs__card-description">
-              Specialized rehabilitation programs to help athletes recover and return to peak performance after surgery.
+              Don't worry if you cannot train in person with us. We have got your back.
             </p>
+            <ul className="programs__card-features">
+              <li>Remote program recommendations</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
 
           <div className="programs__card">
             <div className="programs__card-number">06</div>
-            <h3 className="programs__card-title">Injury Management</h3>
+            <h3 className="programs__card-title">Assessment & Profiling</h3>
             <p className="programs__card-description">
-              Comprehensive injury management programs to minimize downtime and optimize recovery.
+              Technology-driven assessments to understand your strengths, weaknesses, and create personalized training programs.
             </p>
-            <a href="#contact" className="programs__card-button">Learn More</a>
-          </div>
-
-          <div className="programs__card">
-            <div className="programs__card-number">07</div>
-            <h3 className="programs__card-title">Return-to-Play Program</h3>
-            <p className="programs__card-description">
-              Structured programs to safely return athletes to competition after injury or extended breaks.
-            </p>
+            <ul className="programs__card-features">
+              <li>Technology driven Assessment & Profiling</li>
+              <li>Know your strengths & weaknesses</li>
+              <li>Get your program to train by yourself</li>
+            </ul>
             <a href="#contact" className="programs__card-button">Learn More</a>
           </div>
         </div>
