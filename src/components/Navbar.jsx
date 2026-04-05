@@ -28,6 +28,9 @@ export default function Navbar() {
               <a href="#services" className="nav__link">Services</a>
             </li>
             <li className="nav__item">
+              <a href="#team" className="nav__link">Our Team</a>
+            </li>
+            <li className="nav__item">
               <a href="#contact" className="nav__link">Contact Us</a>
             </li>
           </ul>

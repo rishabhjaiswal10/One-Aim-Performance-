@@ -15,7 +15,7 @@ export default function Home() {
             One Aim <br /> <b>Performance</b> <br /> Excellence
           </h1>
           <p className="home__data-description">
-            We are a sports science firm that focuses on athletes at the grassroots level to enhance performance through evidence-based, athlete-centric programs.
+            We are a sports science firm that focuses on athletes at the grassroots level to Elite level and enhance performance through evidence-based, athlete-centric programs.
           </p>
           <a href="#programs" className="button">Explore Programs</a>
         </div>
@@ -34,11 +34,11 @@ export default function Home() {
           <div className="home__info-overlay">
             <div className="home__info-stats">
               <div className="home__info-stat">
-                <span className="home__info-number">6+</span>
-                <span className="home__info-label">Years Experience</span>
+                <span className="home__info-number">10+</span>
+                <span className="home__info-label">Sports Disciplines Trained</span>
               </div>
               <div className="home__info-stat">
-                <span className="home__info-number">100+</span>
+                <span className="home__info-number">500+</span>
                 <span className="home__info-label">Athletes Trained</span>
               </div>
             </div>

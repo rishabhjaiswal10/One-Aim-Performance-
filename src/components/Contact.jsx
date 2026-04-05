@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import founderImage from "../assets/img/founder.png";
 
+const INSTAGRAM_URL = "https://www.instagram.com/oneaimperformance/";
+const LINKEDIN_URL = "https://in.linkedin.com/company/one-aim-performance";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +26,7 @@ export default function Contact() {
 
     {/*                            Change the formspree endpoint here                                */}
     try {
-      const response = await fetch("https://formspree.io/f/xanprvja", { 
+      const response = await fetch("https://formspree.io/f/mgoppddg", { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -87,10 +90,22 @@ export default function Contact() {
             <div className="contact__social">
               <h4 className="contact__social-title">Follow Us</h4>
               <div className="contact__social-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="contact__social-link">
-                  <i className="ri-facebook-box-fill"></i>
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__social-link"
+                  aria-label="One Aim Performance on LinkedIn"
+                >
+                  <i className="ri-linkedin-fill"></i>
                 </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="contact__social-link">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__social-link"
+                  aria-label="One Aim Performance on Instagram"
+                >
                   <i className="ri-instagram-fill"></i>
                 </a>
                 <a href="https://wa.me/919890860102" target="_blank" rel="noreferrer" className="contact__social-link">

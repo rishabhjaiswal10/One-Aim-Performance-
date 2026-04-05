@@ -5,7 +5,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Programs from "./components/Programs";
 import Services from "./components/Services";
+import Team from "./components/Team";
 import Contact from "./components/Contact";
+import OrganisationsBanner from "./components/OrganisationsBanner";
 import Footer from "./components/Footer";
 
 /*
@@ -26,7 +28,9 @@ export default function App() {
           <About />
           <Programs />
           <Services />
+          <Team />
           <Contact />
+          <OrganisationsBanner />
         </main>
       </div>
 
