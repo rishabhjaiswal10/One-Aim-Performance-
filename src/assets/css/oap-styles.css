@@ -270,6 +270,328 @@
   }
 }
 
+/* About — wider column + larger sports sessions slideshow */
+@media screen and (min-width: 768px) {
+  .about__container.grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+    column-gap: 2.75rem;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__container.grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+    column-gap: 3rem;
+  }
+}
+
+.about__sessions {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about__sessions-label {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--oap-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about__sessions-label {
+    text-align: left;
+  }
+}
+
+.about__sessions-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--oap-navy);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .about__sessions-viewport {
+    min-height: 340px;
+    aspect-ratio: 16 / 11;
+    border-radius: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__sessions-viewport {
+    min-height: 400px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.about__sessions-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+  z-index: 0;
+}
+
+.about__sessions-slide--active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.about__sessions-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.about__sessions-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.about__sessions-dot:hover {
+  background: var(--oap-yellow);
+  transform: scale(1.15);
+}
+
+.about__sessions-dot--active {
+  background: var(--oap-navy);
+  transform: scale(1.2);
+}
+
+.about__sessions-static {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.about__sessions-static-item {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about__sessions-static-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Partner organisations — scrolling banner (after Contact, before Footer) */
+.organisations-banner {
+  width: 100%;
+  margin-top: 0;
+  padding: 2.5rem 0 2.25rem;
+  background: linear-gradient(
+    90deg,
+    var(--oap-navy-light) 0%,
+    var(--oap-navy) 35%,
+    var(--oap-navy) 65%,
+    var(--oap-navy-light) 100%
+  );
+  border-top: 3px solid var(--oap-yellow);
+}
+
+.organisations-banner__head {
+  margin-bottom: 1.25rem;
+}
+
+.organisations-banner__title {
+  text-align: center;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--oap-white);
+  margin: 0;
+}
+
+.organisations-banner__viewport {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.organisations-banner__strip {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 3rem;
+  padding: 0.5rem 0;
+  animation: organisations-marquee 45s linear infinite;
+}
+
+.organisations-banner__strip--static {
+  animation: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.organisations-banner__logo-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.organisations-banner__logo-wrap:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.organisations-banner__logo-wrap:focus-visible {
+  outline: 2px solid var(--oap-yellow);
+  outline-offset: 3px;
+}
+
+.organisations-banner__logo-wrap img {
+  display: block;
+  max-height: 3.25rem;
+  max-width: 8.5rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Organisations — lightbox zoom */
+.organisations-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.organisations-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  cursor: pointer;
+}
+
+.organisations-modal__content {
+  position: relative;
+  z-index: 1101;
+  max-width: min(92vw, 760px);
+  max-height: 90vh;
+  background: var(--oap-white);
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--oap-yellow);
+}
+
+.organisations-modal__img {
+  display: block;
+  max-width: 100%;
+  max-height: min(78vh, 520px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.organisations-modal__close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--oap-navy);
+  color: var(--oap-white);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.organisations-modal__close:hover {
+  background: var(--oap-navy-light);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+  .organisations-modal__content {
+    padding: 1.35rem 1rem;
+  }
+
+  .organisations-modal__img {
+    max-height: min(70vh, 420px);
+  }
+}
+
+@keyframes organisations-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .organisations-banner__strip:not(.organisations-banner__strip--static) {
+    animation: none;
+  }
+}
+
 /*========== Programs Section ==========*/
 .programs {
   padding: 5rem 0;
@@ -412,11 +734,68 @@
   line-height: 1.6;
 }
 
-.team__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+.team__pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.75rem;
   margin-top: var(--mb-3);
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team__tier {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__tier-label {
+  text-align: center;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--oap-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  max-width: 36rem;
+  line-height: 1.4;
+}
+
+.team__tier-row {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  justify-items: stretch;
+}
+
+.team__tier-row .team__card {
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team__tier-row--peak {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.team__tier-row--peak .team__card {
+  max-width: 300px;
+}
+
+.team__tier-row--senior {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.team__tier-row--junior {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team__card {
@@ -638,10 +1017,20 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .team__grid {
+@media screen and (max-width: 900px) {
+  .team__tier-row--senior {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__pyramid {
+    gap: 2rem;
+  }
+
+  .team__tier-row--junior {
+    grid-template-columns: 1fr;
+    max-width: 300px;
   }
 }
 

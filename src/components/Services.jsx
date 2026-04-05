@@ -1,7 +1,4 @@
 import React from "react";
-import session1 from "../assets/img/Sessions/Training_Session_01.jpeg";
-import session2 from "../assets/img/Sessions/Training session_02.jpeg";
-import session3 from "../assets/img/Sessions/Training_Session_03.jpeg";
 
 export default function Services() {
   return (
@@ -86,25 +83,6 @@ export default function Services() {
                   Expert nutritional guidance to fuel performance and optimize recovery
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Training Sessions Gallery */}
-        <div className="services__gallery">
-          <h3 className="services__gallery-title">Training Sessions</h3>
-          <p className="services__gallery-subtitle">
-            See our athletes in action during training sessions
-          </p>
-          <div className="services__gallery-grid">
-            <div className="services__gallery-item">
-              <img src={session1} alt="Training Session 1" className="services__gallery-img" />
-            </div>
-            <div className="services__gallery-item">
-              <img src={session3} alt="Training Session 3" className="services__gallery-img" />
-            </div>
-            <div className="services__gallery-item">
-              <img src={session2} alt="Training Session 2" className="services__gallery-img" />
             </div>
           </div>
         </div>

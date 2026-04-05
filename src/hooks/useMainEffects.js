@@ -83,9 +83,15 @@ export default function useMainEffects() {
       origin: 'left',
     });
 
-    sr.reveal(`.about__img-overlay, .contact__founder-content`, {
+    sr.reveal(`.about__sessions, .contact__founder-content`, {
       origin: 'right',
       interval: 100,
+    });
+
+    sr.reveal(`.organisations-banner`, {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1600,
     });
 
 
